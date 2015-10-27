@@ -3,7 +3,7 @@
 #set -x
 
 mv -f /home/$client/web/$site/public_html/wp-config.php /home/$client/web/$site/
-mv -rf /home/$client/web/$site/public_html/wp-content/ /home/$client/web/$site/
+mv -f /home/$client/web/$site/public_html/wp-content/ /home/$client/web/$site/
 
 cd /home/$client/web/$site/
 tar -zcvf wp-content.tar.gz wp-content/ 
