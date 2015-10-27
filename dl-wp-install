@@ -21,5 +21,7 @@ rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/theme
 cd /home/$client/web/$site/public_html/wp-content/themes/ 
 
 wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
+
+find /home/$client/web/$site/public_html -type d -print0 | xargs -0 chmod 755 && find /home/$client/web/$site/public_html -type f -print0 | xargs -0 chmod 644 && chown -R $client:$client /home/$client/web/
            
 #####
