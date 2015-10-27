@@ -2,7 +2,7 @@
 
 #set -x
 
-rm -rf /home/$client/web/$site/public_html* 
+rm !(wp-config.php) -rf /home/$client/web/$site/public_html* 
   
 mkdir /home/$client/web/$site/public_html 
 
