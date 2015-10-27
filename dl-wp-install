@@ -2,9 +2,13 @@
 
 #set -x
 
-rm !(wp-config.php) -rf /home/$client/web/$site/public_html* 
+mv -f /home/$client/web/$site/public_html/wp-config.php /home/$client/web/$site/
+
+rm -rf /home/$client/web/$site/public_html* 
   
 mkdir /home/$client/web/$site/public_html 
+
+mv -f /home/$client/web/$site/wp-config.php /home/$client/web/$site/public_html/
 
 cd /home/$client/web/$site/public_html
 
