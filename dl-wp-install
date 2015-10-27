@@ -20,7 +20,7 @@ wget http://wordpress.org/latest.tar.gz && tar xfz latest.tar.gz
 
 mv -f wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz 
 
-mv -rf /home/$client/web/$site/wp-content.tar.gz /home/$client/web/$site/public_html/
+mv -f /home/$client/web/$site/wp-content.tar.gz /home/$client/web/$site/public_html/
 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
