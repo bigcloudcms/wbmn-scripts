@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#set -x
+
+rm -rf /usr/local/vesta/data/templates/web/skel/public_html* 
+  
+mkdir /usr/local/vesta/data/templates/web/skel/public_html 
+
+cd /usr/local/vesta/data/templates/web/skel/public_html 
+
+wget http://wordpress.org/latest.tar.gz && tar xfz latest.tar.gz 
+
+mv -f wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz 
+
+rm -rf /usr/local/vesta/data/templates/web/skel/public_html/wp-content/themes/twentyfourteen* 
+rm -rf /usr/local/vesta/data/templates/web/skel/public_html/wp-content/themes/twentythirteen* 
+rm -f /usr/local/vesta/data/templates/web/skel/public_html/wp-content/wp-config-sample.php 
+
+cp /usr/local/vesta/data/templates/web/skel/* /usr/local/vesta/data/templates/web/skel/public_html/ 
+
+rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /usr/local/vesta/data/templates/web/skel/public_html/wp-content/themes/virtue_premium/ 
+
+cd /usr/local/vesta/data/templates/web/skel/public_html/wp-content/themes/ 
+
+wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
+           
+#####

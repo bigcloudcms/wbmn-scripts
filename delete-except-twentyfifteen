@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#set -x
+
+rm -rf /home/$user/web/$site/public_html/wp-content/themes/twentyfourteen* && rm -rf /home/$user/web/$site/public_html/wp-content/themes/twentythirteen*
+  
+#####

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#set -x
+
+rsync -avze ssh /$src root@$site:/$des
+  
+#####

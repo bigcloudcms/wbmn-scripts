@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+echo "$sitename"|cat - /home/panel/$user/all-sites > /tmp/out && mv /tmp/out /home/panel/$user/all-sites
+
+
+###
