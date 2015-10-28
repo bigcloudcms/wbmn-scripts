@@ -33,8 +33,8 @@ mv -f wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz
 mv -f /home/$client/web/$site/tmp /home/$client/web/$site/public_html/wp-content/ 
 rm -rf /home/$client/web/$site/tmp*
 
-cd /home/$client/web/$site/public_html/wp-content/tmp
-mv -f tmp/*.tar.gz ./ && rmdir ./tmp/ 
+cd /home/$client/web/$site/public_html/wp-content/
+mv -f tmp/*.tar.gz ./ 
 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
