@@ -38,7 +38,7 @@ mv -f tmp/*.tar.gz ./
 rm -rf /home/$client/web/$site/public_html/wp-content/tmp*
 
 cd /home/$client/web/$site/public_html/wp-content
-tar xfz /themes.tar.gz 
+tar xfz themes.tar.gz 
 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
