@@ -5,21 +5,10 @@ rm -rf /home/$client/web/$site/tmp*
 mkdir /home/$client/web/$site/tmp
 
 mv -f /home/$client/web/$site/public_html/wp-config.php /home/$client/web/$site/tmp
-mv -f /home/$client/web/$site/public_html/wp-content/themes /home/$client/web/$site/tmp
-mv -f /home/$client/web/$site/public_html/wp-content/plugins /home/$client/web/$site/tmp
-if [ -d "/home/$client/web/$site/public_html/wp-content/uploads" ]
-then
-    mv -f /home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/tmp
-else
-    mkdir /home/$client/web/$site/public_html/wp-content/uploads
-    mv -f /home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/tmp
-fi
+mv -f /home/$client/web/$site/public_html/wp-content /home/$client/web/$site/tmp
 
 cd /home/$client/web/$site/tmp
-tar -zcvf themes.tar.gz themes && tar -zcvf plugins.tar.gz plugins && tar -zcvf uploads.tar.gz uploads
-
-#cd /home/$client/web/$site/tmp
-#rm -rf themes* && rm -rf plugins* && rm -rf uploads*
+tar -zcvf wp-content.tar.gz wp-content 
 
 rm -rf /home/$client/web/$site/public_html* 
   
@@ -30,17 +19,15 @@ cd /home/$client/web/$site/public_html
 wget http://wordpress.org/latest.tar.gz && tar xfz latest.tar.gz 
 mv -f wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz 
 
-mv -f /home/$client/web/$site/tmp /home/$client/web/$site/public_html/wp-content/ 
+mv -f /home/$client/web/$site/tmp /home/$client/web/$site/public_html/ 
 rm -rf /home/$client/web/$site/tmp*
 
-cd /home/$client/web/$site/public_html/wp-content/
-mv -f tmp/*.tar.gz ./
+cd /home/$client/web/$site/public_html/
+mv -f tmp/wp-content.tar.gz ./
 rm -rf /home/$client/web/$site/public_html/wp-content/tmp*
 
-cd /home/$client/web/$site/public_html/wp-content
-tar xfz themes.tar.gz
-tar xfz plugins.tar.gz 
-tar xfz uploads.tar.gz 
+cd /home/$client/web/$site/public_html
+tar xfz wp-content.tar.gz
 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
