@@ -26,7 +26,7 @@ cd /home/$client/web/$site/public_html/
 mv -f tmp/wp-content.tar.gz ./
 
 cd /home/$client/web/$site/public_html
-tar xfz wp-content.tar.gz
+tar xfz wp-content.tar.gz && rm -f wp-content.tar.gz
 
 rm -rf /home/$client/web/$site/public_html/tmp*
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
