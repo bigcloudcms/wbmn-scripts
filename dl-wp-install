@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #set -x
+mkdir /home/$client/web/$site/tmp
 
 mv -f /home/$client/web/$site/public_html/wp-config.php /home/$client/web/$site/tmp
 mv -f /home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/tmp
