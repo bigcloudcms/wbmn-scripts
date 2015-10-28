@@ -24,7 +24,6 @@ rm -rf themes* && rm -rf plugins* && rm -rf uploads*
 rm -rf /home/$client/web/$site/public_html* 
   
 mkdir /home/$client/web/$site/public_html 
-
 mv -f /home/$client/web/$site/tmp/wp-config.php /home/$client/web/$site/public_html/
 
 cd /home/$client/web/$site/public_html
@@ -32,9 +31,12 @@ wget http://wordpress.org/latest.tar.gz && tar xfz latest.tar.gz
 mv -f wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz 
 
 cd /home/$client/web/$site/tmp
-mv -f themes.tar.gz /home/$client/web/$site/public_html/wp-content/ #&& tar xfz themes.tar.gz -c /home/$client/web/$site/public_html/wp-content/
-mv -f plugins.tar.gz /home/$client/web/$site/public_html/wp-content/ #&& tar xfz plugins.tar.gz -c /home/$client/web/$site/public_html/wp-content/
-mv -f uploads.tar.gz /home/$client/web/$site/public_html/wp-content/ #&& tar xfz uploads.tar.gz -C /home/$client/web/$site/public_html/wp-content/
+mv -f themes.tar.gz /home/$client/web/$site/public_html/wp-content/ 
+#&& tar xfz themes.tar.gz -c /home/$client/web/$site/public_html/wp-content/
+mv -f plugins.tar.gz /home/$client/web/$site/public_html/wp-content/ 
+#&& tar xfz plugins.tar.gz -c /home/$client/web/$site/public_html/wp-content/
+mv -f uploads.tar.gz /home/$client/web/$site/public_html/wp-content/ 
+#&& tar xfz uploads.tar.gz -C /home/$client/web/$site/public_html/wp-content/
 #rm -rf /home/$client/web/$site/tmp*
 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
