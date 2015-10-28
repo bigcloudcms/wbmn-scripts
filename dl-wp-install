@@ -4,14 +4,14 @@
 mkdir /home/$client/web/$site/tmp
 
 mv -f /home/$client/web/$site/public_html/wp-config.php /home/$client/web/$site/tmp
-mv -f /home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/tmp
 mv -f /home/$client/web/$site/public_html/wp-content/themes /home/$client/web/$site/tmp
 mv -f /home/$client/web/$site/public_html/wp-content/plugins /home/$client/web/$site/tmp
+mv -f /home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/tmp
 
 cd /home/$client/web/$site/tmp
-tar -zcvf upload.tar.gz uploads/ 
 tar -zcvf themes.tar.gz themes/ 
 tar -zcvf plugins.tar.gz plugins/
+tar -zcvf upload.tar.gz uploads/
 
 rm -rf /home/$client/web/$site/public_html* 
   
@@ -26,20 +26,20 @@ mv -f wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz
 
 cd /home/$client/web/$site/tmp
 
-mv -f uploads.tar.gz /home/$client/web/$site/public_html/wp-content/ && tar xfz uploads.tar.gz -C /home/$client/web/$site/public_html/wp-content/
 mv -f themes.tar.gz /home/$client/web/$site/public_html/wp-content/ && tar xfz themes.tar.gz -c /home/$client/web/$site/public_html/wp-content/
 mv -f plugins.tar.gz /home/$client/web/$site/public_html/wp-content/ && tar xfz plugins.tar.gz -c /home/$client/web/$site/public_html/wp-content/
-#rm -rf /home/$client/web/$site/tmp*
+mv -f uploads.tar.gz /home/$client/web/$site/public_html/wp-content/ && tar xfz uploads.tar.gz -C /home/$client/web/$site/public_html/wp-content/
+rm -rf /home/$client/web/$site/tmp*
 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
 
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/ 
-#rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/plugins/ /home/$client/web/$site/public_html/wp-content/plugins/
+rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/plugins/ /home/$client/web/$site/public_html/wp-content/plugins/
 
-cd /home/$client/web/$site/public_html/wp-content/
-wget https://github.com/bigcloudcms/shared-plugins/archive/master.tar.gz #&& tar xfz master.tar.gz && rm -f master.tar.gz
-mv -f master.tar.gz && tar xfz master.tar.gz -C /home/$client/web/$site/public_html/wp-content/plugins/
+#cd /home/$client/web/$site/public_html/wp-content/
+#wget https://github.com/bigcloudcms/shared-plugins/archive/master.tar.gz #&& tar xfz master.tar.gz && rm -f master.tar.gz
+#mv -f master.tar.gz && tar xfz master.tar.gz -C /home/$client/web/$site/public_html/wp-content/plugins/
 
 
 cd /home/$client/web/$site/public_html/wp-content/themes/ 
