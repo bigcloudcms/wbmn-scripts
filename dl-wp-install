@@ -2,25 +2,31 @@
 
 #set -x
 
-mv -f /home/$client/web/$site/public_html/wp-config.php /home/$client/web/$site/
-mv -f /home/$client/web/$site/public_html/wp-content/ /home/$client/web/$site/
+mv -f /home/$client/web/$site/public_html/wp-config.php /home/$client/web/$site/tmp
+mv -f /home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/tmp
+mv -f /home/$client/web/$site/public_html/wp-content/themes /home/$client/web/$site/tmp
+mv -f /home/$client/web/$site/public_html/wp-content/plugins /home/$client/web/$site/tmp
 
-cd /home/$client/web/$site/
-tar -zcvf wp-content.tar.gz wp-content/ 
+cd /home/$client/web/$site/tmp
+tar -zcvf upload.tar.gz uploads/ && tar -zcvf themes.tar.gz themes/ && tar -zcvf plugins.tar.gz plugins/
 
 rm -rf /home/$client/web/$site/public_html* 
   
 mkdir /home/$client/web/$site/public_html 
 
-mv -f /home/$client/web/$site/wp-config.php /home/$client/web/$site/public_html/
+mv -f /home/$client/web/$site/tmp/wp-config.php /home/$client/web/$site/public_html/
 
 cd /home/$client/web/$site/public_html
 wget http://wordpress.org/latest.tar.gz && tar xfz latest.tar.gz 
 
 mv -f wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz 
 
-mv -f /home/$client/web/$site/wp-content.tar.gz /home/$client/web/$site/public_html/ 
-rm -rf /home/$client/web/$site/wp-content*
+cd /home/$client/web/$site
+
+mv -f /tmp/uploads.tar.gz /public_html/wp-content/ && tar xfz uploads.tar.gz -C /public_html/wp-content/
+mv -f /tmp/themes.tar.gz /public_html/wp-content/ && tar xfz themes.tar.gz -c /public_html/wp-content/
+mv -f /tmp/plugins.tar.gz /public_html/wp-content/ && tar xfz plugins.tar.gz -c /public_html/wp-content/
+#rm -rf /home/$client/web/$site/tmp*
 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
