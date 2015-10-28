@@ -19,9 +19,9 @@ tar -zcvf /home/$client/web/$site/tmp/themes.tar.gz /home/$client/web/$site/tmp/
 tar -zcvf /home/$client/web/$site/tmp/plugins.tar.gz /home/$client/web/$site/tmp/plugins 
 tar -zcvf /home/$client/web/$site/tmp/upload.tar.gz /home/$client/web/$site/tmp/uploads
 
-rm -rf /home/$client/web/$site/tmp/themes* 
-rm -rf /home/$client/web/$site/tmp/plugins* 
-rm -rf /home/$client/web/$site/tmp/uploads*
+#rm -rf /home/$client/web/$site/tmp/themes* 
+#rm -rf /home/$client/web/$site/tmp/plugins* 
+#rm -rf /home/$client/web/$site/tmp/uploads*
 
 rm -rf /home/$client/web/$site/public_html* 
   
