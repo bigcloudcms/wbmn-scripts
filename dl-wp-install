@@ -7,7 +7,14 @@ mkdir /home/$client/web/$site/tmp
 mv -f /home/$client/web/$site/public_html/wp-config.php /home/$client/web/$site/tmp
 mv -f /home/$client/web/$site/public_html/wp-content/themes /home/$client/web/$site/tmp
 mv -f /home/$client/web/$site/public_html/wp-content/plugins /home/$client/web/$site/tmp
-mv -f /home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/tmp
+if [ -d "/home/$client/web/$site/public_html/wp-content/uploads" ]
+then
+    mv -f /home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/tmp
+else
+    mkdir /home/$client/web/$site/public_html/wp-content/uploads
+    mv -f /home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/tmp
+fi
+
 
 cd /home/$client/web/$site/tmp
 tar -zcvf themes.tar.gz themes/ 
