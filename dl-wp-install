@@ -17,9 +17,12 @@ fi
 
 
 cd /home/$client/web/$site/tmp
-tar -zcvf themes.tar.gz themes/ && rm -rf /themes*
-tar -zcvf plugins.tar.gz plugins/ && rm -rf /plugins*
-tar -zcvf upload.tar.gz uploads/ && rm -rf /uploads*
+tar -zcvf themes.tar.gz themes/ 
+rm -rf /home/$client/web/$site/tmp/themes*
+tar -zcvf plugins.tar.gz plugins/ 
+rm -rf /home/$client/web/$site/tmp/plugins*
+tar -zcvf upload.tar.gz uploads/ 
+rm -rf /home/$client/web/$site/tmp/uploads*
 
 rm -rf /home/$client/web/$site/public_html* 
   
