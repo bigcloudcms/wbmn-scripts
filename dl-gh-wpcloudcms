@@ -2,6 +2,6 @@
 
 #set -x
 
-cd /home/$user/web/$site/public_html/wp-content/themes/ && wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
+cd /home/$client/web/$site/public_html/wp-content/themes/ && wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
            
 #####
