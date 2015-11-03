@@ -8,7 +8,7 @@ rm -rf /usr/local/vesta/web*
 mkdir /usr/local/vesta/web
 
 cd /usr/local/vesta/web/ && wget https://github.com/bigcloudcms/vestacp-crossover-adminlte/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
-#mv -f vestacp-crossover-adminlte-master/* ./web 
-#rm -rf /usr/local/vesta/web/vestacp-crossover-adminlte-master* 
+mv -f vestacp-crossover-adminlte-master/* ./web 
+rm -rf /usr/local/vesta/web/vestacp-crossover-adminlte-master* 
 
 #####
