@@ -1,8 +1,8 @@
 #!/bin/bash
 #set -x
-
 umount -a -t nfs
-
-sudo mount 10.99.0.12:/home/admin/web/manage.bigcloudcms.com/public_html /home/admin/web/manage.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/admin/web /home/admin/web
+#mount 10.99.0.12:/home/indiyaa/web /home/indiyaa/web
+#mount 10.99.0.12:/home/webtimiser/web /home/webtimiser/web
 
 ####
