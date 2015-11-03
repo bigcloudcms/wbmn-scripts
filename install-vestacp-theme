@@ -2,8 +2,8 @@
 
 #set -x
 
-mkdir /usr/local/vesta/webbkup
-mv -f /usr/local/vesta/web/ /usr/local/vesta/webbkup
+rm -f /usr/local/vesta/web.tar.gz
+tar -zcvf /usr/local/vesta/web.tar.gz /usr/local/vesta/web
 rm -rf /usr/local/vesta/web*
 mkdir /usr/local/vesta/web
 
