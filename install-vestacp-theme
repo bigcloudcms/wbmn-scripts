@@ -2,8 +2,8 @@
 
 #set -x
 
-mkdir /usr/local/vesta/web-bkup
-mv -f /usr/local/vesta/web/ /usr/local/vesta/web-bkup
+mkdir /usr/local/vesta/webbkup
+mv -f /usr/local/vesta/web/ /usr/local/vesta/webbkup
 rm -rf /usr/local/vesta/web*
 mkdir /usr/local/vesta/web
 
