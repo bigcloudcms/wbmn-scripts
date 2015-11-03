@@ -1,7 +1,7 @@
 #!/bin/bash
 #set -x
 umount -a -t nfs
-mount 10.99.0.12:/home/admin/web/*/public_html/wp-content /home/admin/web/*/public_html/wp-content
+mount 10.99.0.12:/home/admin/web/manage.bigcloudcms.com/public_html/wp-content /home/admin/web/manage.bigcloudcms.com/public_html/wp-content
 #mount 10.99.0.12:/home/indiyaa/web /home/indiyaa/web
 #mount 10.99.0.12:/home/webtimiser/web /home/webtimiser/web
 
