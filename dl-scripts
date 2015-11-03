@@ -6,7 +6,7 @@ if [ -d /home/scripts ]; then
 		echo "scripts folder exist, taking backup..."
 		echo "============================================"
 mkdir /home/scriptsbkup
-mv -f /home/scripts* /home/scriptsbkup 
+mv -f /home/scripts/* /home/scriptsbkup 
 rm -rf /home/scripts*
   echo "============================================"
 		echo "backedup scripts..."
