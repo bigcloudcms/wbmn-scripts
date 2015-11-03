@@ -1,8 +1,7 @@
 #!/bin/bash
 
 #set -x
-if [ -d /home/scripts ]; then 
-mkdir /home/scriptsbkup
+if [ -d /home/scripts ]; then "mkdir /home/scriptsbkup";
 mv -f /home/scripts/* /home/scriptsbkup 
 rm -rf /home/scripts* 
 else "";
