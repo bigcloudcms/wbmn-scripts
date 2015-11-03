@@ -5,17 +5,26 @@ if [ -d /home/scripts ]; then
     echo "============================================"
 		echo "scripts folder exist, taking backup..."
 		echo "============================================"
-mkdir /home/scriptsbkup;
-mv -f /home/scripts/* /home/scriptsbkup 
+mkdir /home/scriptsbkup
+	echo "============================================"
+		echo "Making Directory scriptsbkup..."
+		echo "============================================"
+mv -f /home/scripts* /home/scriptsbkup 
+	echo "============================================"
+		echo "Making Directory scriptsbkup and Moving scripts..."
+		echo "============================================"
 rm -rf /home/scripts*
+  echo "============================================"
+		echo "Removed scripts folder..."
+		echo "============================================";
 else 
     echo "============================================"
 		echo "scripts folder doesn't exist, mkdir scripts.."
-		echo "============================================" ;
+		echo "============================================";
 fi
+mkdir /home/scripts 
 cd /home 
 wget https://github.com/bigcloudcms/wbmn-scripts/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz 
-mkdir /home/scripts 
 mv -f /home/wbmn-scripts-master/* /home/scripts
 rm -rf /home/wbmn-scripts-master* 
 find /home/scripts* -type f -print0 | xargs -0 chmod 777 
