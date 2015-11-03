@@ -3,13 +3,12 @@
 #set -x
 if [ -d /home/scripts ]
 then 
-echo "create scriptsbkup"
-#create scriptsbkup
+echo "scripts folder exist, create scriptsbkup"
 mkdir /home/scriptsbkup
 mv -f /home/scripts /home/scriptsbkup 
 rm -rf /home/scripts*
 else 
-  echo "scripts not exist"
+  echo "scripts folder not exist"
 fi
 mkdir /home/scripts 
 cd /home 
@@ -19,4 +18,3 @@ rm -rf /home/wbmn-scripts-master*
 find /home/scripts* -type f -print0 | xargs -0 chmod 777 
 
 #####
-
