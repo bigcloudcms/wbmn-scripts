@@ -3,5 +3,6 @@
 
 umount -a -t nfs
 
+sudo mount 10.99.0.12:/home/admin/web/manage.bigcloudcms.com/public_html /home/admin/web/manage.bigcloudcms.com/public_html
 
 ####
