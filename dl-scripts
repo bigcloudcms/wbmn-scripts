@@ -6,16 +6,10 @@ if [ -d /home/scripts ]; then
 		echo "scripts folder exist, taking backup..."
 		echo "============================================"
 mkdir /home/scriptsbkup
-	echo "============================================"
-		echo "Making Directory scriptsbkup..."
-		echo "============================================"
 mv -f /home/scripts* /home/scriptsbkup 
-	echo "============================================"
-		echo "Making Directory scriptsbkup and Moving scripts..."
-		echo "============================================"
 rm -rf /home/scripts*
   echo "============================================"
-		echo "Removed scripts folder..."
+		echo "backedup scripts..."
 		echo "============================================";
 else 
     echo "============================================"
