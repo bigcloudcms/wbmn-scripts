@@ -19,7 +19,5 @@ wget https://github.com/bigcloudcms/wbmn-scripts/archive/master.tar.gz && tar xf
 mkdir /home/scripts 
 mv -f /home/wbmn-scripts-master/* /home/scripts
 rm -rf /home/wbmn-scripts-master* 
-#mv -f /home/scriptsbkup/* /home/scripts 
-#rm -rf /home/scriptsbkup*
 find /home/scripts* -type f -print0 | xargs -0 chmod 777 
 #####
