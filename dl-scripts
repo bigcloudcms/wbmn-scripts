@@ -14,7 +14,7 @@ mkdir -pv /home/scripts
 mv -f /home/wbmn-scripts-master/* /home/scripts
 rm -rf /home/wbmn-scripts-master*
 rsync -a /home/scriptsbkup/* /home/scripts
-rmdir /home/scriptsbkup
+rm -rf /home/scriptsbkup*
 find /home/scripts* -type f -print0 | xargs -0 chmod 777 
 
 #####
