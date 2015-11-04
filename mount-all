@@ -2,7 +2,10 @@
 #set -x
 umount -a -t nfs
 mount 10.99.0.12:/home/admin/web /home/admin/web
-mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content
+mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
+mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/upgrade /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/upgrade
+mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
+mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/backups /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/backups
 mount 10.99.0.12:/home/webtimiser/web /home/webtimiser/web
 
 ####
