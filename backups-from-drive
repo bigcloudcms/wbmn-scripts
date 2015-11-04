@@ -2,15 +2,19 @@
 # set X
 
 rsync -avze ssh --exclude '*.tar.gz' root@10.99.0.12:/home/admin /home/admin  && tar -zcvf /home/admin.tar.gz /home/admin
+rm -rf /home/admin*
 echo "================= admin Backup Completed Successfully ===================="; 
 
 rsync -avze ssh --exclude '*.tar.gz' root@10.99.0.12:/home/indiyaa /home/indiyaa  && tar -zcvf /home/indiyaa.tar.gz /home/indiyaa
+rm -rf /home/indiyaa*
 echo "================= indiyaa Backup Completed Successfully ===================="; 
 
 rsync -avze ssh --exclude '*.tar.gz' root@10.99.0.12:/home/webtimiser /home/webtimiser  && tar -zcvf /home/webtimiser.tar.gz /home/webtimiser
+rm -rf /home/webtimiser*
 echo "================= webtimiser Backup Completed Successfully ===================="; 
 
 rsync -avze ssh root@10.99.0.11:/usr/local/vesta /home/vesta  && tar -zcvf /home/vesta.tar.gz /home/vesta 
+rm -rf /home/admin*
 echo "=================Vesta Backup Completed Successfully ====================";
 
 ###
