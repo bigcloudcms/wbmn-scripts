@@ -1,7 +1,7 @@
 #!/bin/bash
 # set X
 
-rsync -avze ssh root@10.99.0.12:/home /home/  && tar -zcvf /home/home.tar.gz /home/
+rsync -avze ssh --exclude '*.tar.gz' root@10.99.0.12:/home /home/  && tar -zcvf /home/home.tar.gz /home/
 echo "================= Home Backup Completed Successfully ===================="; 
 
 rsync -avze ssh root@10.99.0.11:/usr/local/vesta /home/vesta  && tar -zcvf /home/vesta.tar.gz /home/vesta 
