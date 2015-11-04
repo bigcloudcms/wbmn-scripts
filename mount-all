@@ -10,4 +10,6 @@ mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html
 echo "==================== backups mouted Successfully ========================";
 mount 10.99.0.12:/home/webtimiser/web /home/webtimiser/web
 
+
+echo "==================== That's all mouted Successfully ========================";
 ####
