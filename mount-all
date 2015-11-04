@@ -1,8 +1,7 @@
 mount 10.99.0.12:/home/admin/web /home/admin/web
 mount 10.99.0.12:/home/indiyaa/web /home/indiyaa/web
 mount 10.99.0.12:/home/webtimiser/web /home/webtimiser/web
-
-mount 10.99.0.14:/home/backup /home/backup
+mount 10.99.0.12:/home/backup /home/backup
 echo "========================================================================";
 echo "================== That's All Mouted Successfully ======================";
 echo "========================================================================";
