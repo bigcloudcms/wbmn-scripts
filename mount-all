@@ -4,5 +4,5 @@ mount 10.99.0.12:/home/webtimiser/web /home/webtimiser/web
 
 mount 10.99.0.14:/home/backup /home/backup
 echo "========================================================================";
-echo "================== That's All, Mouted Successfully ======================";
+echo "================== That's All Mouted Successfully ======================";
 echo "========================================================================";
