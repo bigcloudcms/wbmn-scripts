@@ -7,7 +7,7 @@ echo "==================== plugins mouted Successfully ========================"
 mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
 echo "==================== uploads mouted Successfully ========================";
 mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/backups /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/backups
-echo "==================== plugins mouted Successfully ========================";
+echo "==================== backups mouted Successfully ========================";
 mount 10.99.0.12:/home/webtimiser/web /home/webtimiser/web
 
 ####
