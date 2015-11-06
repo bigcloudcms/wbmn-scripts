@@ -1,4 +1,3 @@
-mount 10.99.0.12:/home/admin/web /home/admin/web
 mount 10.99.0.12:/home/indiyaa/web /home/indiyaa/web
 mount 10.99.0.12:/home/webtimiser/web /home/webtimiser/web
 mount 10.99.0.12:/home/backup /home/backup
