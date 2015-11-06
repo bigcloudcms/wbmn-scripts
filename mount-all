@@ -1,42 +1,22 @@
-mount 10.99.0.12:/home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
-mount 10.99.0.12:/home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content/themes /home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content/themes
+mount 10.99.0.12:/home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content
 
-mount 10.99.0.12:/home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
-mount 10.99.0.12:/home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content/themes /home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content/themes
+mount 10.99.0.12:/home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content
 
-mount 10.99.0.12:/home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
-mount 10.99.0.12:/home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content/themes /home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content/themes
+mount 10.99.0.12:/home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content
 
-mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
-mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/themes /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content/themes
+mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content
 
-mount 10.99.0.12:/home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
-mount 10.99.0.12:/home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html/wp-content/themes /home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html/wp-content/themes
+mount 10.99.0.12:/home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html/wp-content
 
-mount 10.99.0.12:/home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
-mount 10.99.0.12:/home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html/wp-content/themes /home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html/wp-content/themes
+mount 10.99.0.12:/home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html/wp-content
 
-mount 10.99.0.12:/home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
-mount 10.99.0.12:/home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html/wp-content/themes /home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html/wp-content/themes
+mount 10.99.0.12:/home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html/wp-content
 
-mount 10.99.0.12:/home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
-mount 10.99.0.12:/home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content/themes /home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content/themes
+mount 10.99.0.12:/home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content
 
-mount 10.99.0.12:/home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
-mount 10.99.0.12:/home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content/themes /home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content/themes
+mount 10.99.0.12:/home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content
 
-mount 10.99.0.12:/home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content/plugins /home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content/plugins
-mount 10.99.0.12:/home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content/themes /home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content/themes
+mount 10.99.0.12:/home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content
 
 mount 10.99.0.12:/home/webtimiser/web /home/webtimiser/web
 mount 10.99.0.12:/home/backup /home/backup
