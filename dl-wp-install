@@ -27,7 +27,9 @@ else
   echo ''; fi
   
 cd /home/$client/web/$site/public_html
-wget http://wordpress.org/latest.tar.gz && tar xfz latest.tar.gz 
+wget http://wordpress.org/latest.tar.gz 
+echo '===================== Dont Close this page. Installation going.... Please, wait... =========================';
+tar xfz latest.tar.gz 
 mv -f wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz 
 
 if [ -d /home/$client/web/$site/tmp ]; then echo 'wp-content Backup Exists, Restoring...';
