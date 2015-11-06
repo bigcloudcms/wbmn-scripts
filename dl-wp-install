@@ -1,34 +1,46 @@
 #!/bin/bash
 
 #set -x
+if [ -d /home/$client/web/$site/tmp ]; then echo 'tmp Exists';
 rm -rf /home/$client/web/$site/tmp*
 mkdir /home/$client/web/$site/tmp
+else
+  echo 'tmp Not Exist'; fi
 
+if [ -f /home/$client/web/$site/public_html/wp-config.php ]; then echo 'wp-config.php Exists';
 mv -f /home/$client/web/$site/public_html/wp-config.php /home/$client/web/$site/tmp
+else
+  echo 'wp-config.php Not Exist'; fi
+if [ -d /home/$client/web/$site/public_html/wp-content ]; then echo 'wp-content Exists';
 mv -f /home/$client/web/$site/public_html/wp-content /home/$client/web/$site/tmp
-
 cd /home/$client/web/$site/tmp
 tar -zcvf wp-content.tar.gz wp-content 
-
+else
+  echo 'wp-content Not Exist'; fi
+  
 rm -rf /home/$client/web/$site/public_html* 
   
 mkdir /home/$client/web/$site/public_html 
+if [ -f /home/$client/web/$site/tmp/wp-config.php ]; then echo 'wp-config.php Backup Exists, Restoring...';
 mv -f /home/$client/web/$site/tmp/wp-config.php /home/$client/web/$site/public_html/
-
+else
+  echo ''; fi
+  
 cd /home/$client/web/$site/public_html
 wget http://wordpress.org/latest.tar.gz && tar xfz latest.tar.gz 
 mv -f wordpress/* ./ && rmdir ./wordpress/ && rm -f latest.tar.gz 
 
+if [ -d /home/$client/web/$site/tmp ]; then echo 'wp-content Backup Exists, Restoring...';
 mv -f /home/$client/web/$site/tmp /home/$client/web/$site/public_html/ 
 rm -rf /home/$client/web/$site/tmp*
-
 cd /home/$client/web/$site/public_html/
 mv -f tmp/wp-content.tar.gz ./
-
+rm -rf /home/$client/web/$site/public_html/tmp*
 cd /home/$client/web/$site/public_html
 tar xfz wp-content.tar.gz && rm -f wp-content.tar.gz
+else
+  echo ''; fi
 
-rm -rf /home/$client/web/$site/public_html/tmp*
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
 
