@@ -1,22 +1,22 @@
-mount 10.99.0.12:/home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html /home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html
 
-mount 10.99.0.12:/home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html /home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html
 
-mount 10.99.0.12:/home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html /home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html
 
-mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html /home/indiyaa/web/bsnleungc.indiyaa.bigcloudcms.com/public_html
 
-mount 10.99.0.12:/home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html /home/indiyaa/web/aakashmanpower.indiyaa.bigcloudcms.com/public_html
 
-mount 10.99.0.12:/home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html /home/indiyaa/web/miriamtrust.indiyaa.bigcloudcms.com/public_html
 
-mount 10.99.0.12:/home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html /home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_html
 
-mount 10.99.0.12:/home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html /home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html
 
-mount 10.99.0.12:/home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html /home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html
 
-mount 10.99.0.12:/home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content /home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html
+mount 10.99.0.12:/home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html /home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html
 
 mount 10.99.0.12:/home/webtimiser/web /home/webtimiser/web
 mount 10.99.0.12:/home/backup /home/backup
