@@ -2,9 +2,9 @@
 
 #set -x
 if [ -d /home/$client/web/$site/tmp ]; then echo 'tmp Exists';
-rm -rf /home/$client/web/$site/tmp*
 else
   echo 'tmp Not Exist'; fi
+rm -rf /home/$client/web/$site/tmp*
 mkdir /home/$client/web/$site/tmp
 
 if [ -f /home/$client/web/$site/public_html/wp-config.php ]; then echo 'wp-config.php Exists';
