@@ -25,7 +25,7 @@ mount 10.99.0.12:/home/webtimiser/web/isst.webtimiser.bigcloudcms.com/public_htm
 mount 10.99.0.12:/home/webtimiser/web/lonehald.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/lonehald.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/webtimiser/web/tping.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/tping.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/webtimiser/web/nielsviggo.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/nielsviggo.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
-
+echo "================== webtimiser uploads Mouted Successfully ======================";
 mount 10.99.0.12:/home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/stmaryseducation.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/mhaa.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/advaitamandscience.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
@@ -36,7 +36,7 @@ mount 10.99.0.12:/home/indiyaa/web/kidneystone.indiyaa.bigcloudcms.com/public_ht
 mount 10.99.0.12:/home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
-
+echo "================== indiyaa uploads Mouted Successfully ======================";
 mount 10.99.0.12:/home/backup /home/backup
 echo "========================================================================";
 echo "================== That's All Mouted Successfully ======================";
