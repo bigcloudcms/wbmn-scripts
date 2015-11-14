@@ -46,8 +46,12 @@ echo 'Deleting unused themes twentythirteen and twentyfourteen...';
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
 
-cd /home/$client/web/$site/public_html/
-rsync -avz /home/scripts/wp-config-sample.php /home/$client/web/$site/public_html/ 
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="wordpress"/value="$client_$site"/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="<?php echo htmlspecialchars( _x( 'username', 'example username' ), ENT_QUOTES ); ?>"/value="$client_$site"/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/id="pwd" type="text"/id="pwd" type="password"/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="<?php echo htmlspecialchars( _x( 'password', 'example password' ), ENT_QUOTES ); ?>"/value="Tripod=002"/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="localhost"/value="10.99.0.13"/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="wp_"/value="$site_"/g" {} \;
 
 echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/ 
