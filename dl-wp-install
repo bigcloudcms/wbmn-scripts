@@ -46,11 +46,11 @@ echo 'Deleting unused themes twentythirteen and twentyfourteen...';
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
 
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="wordpress"/value="$client_$site"/g" {} \;
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/'username', 'example username'/'$client_$site', 'example username'/g" {} \;
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/id="pwd" type="text"/id="pwd" type="password"/g" {} \;
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="'password', 'example password'/'Tripod=002', 'example password'/g" {} \;
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="localhost"/value="10.99.0.13"/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i 's/value="wordpress"/value="$client_$site"/g' {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i 's/'username', 'example username'/'$client_$site', 'example username'/g' {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i 's/id="pwd" type="text"/id="pwd" type="password"/g' {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i 's/value="'password', 'example password'/'Tripod=002', 'example password'/g' {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i 's/value="localhost"/value="10.99.0.13"/g' {} \;
 
 echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/ 
