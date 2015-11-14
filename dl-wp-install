@@ -47,7 +47,10 @@ rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen*
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
 
 rsync -avz /home/scripts/wp-config.php /home/$client/web/$site/public_html/ 
-find /home/$client/web/$site/public_html/ -name \wp-config.php -exec sed -i "s/define('DB_NAME', 'database_name_here');/define('DB_NAME', '10.99.0.13');/g" {} \;
+find /home/$client/web/$site/public_html/ -name \wp-config.php -exec sed -i "s/define('DB_NAME', 'database_name_here');/define('DB_NAME', '$client _ echo '$site' | awk '{print substr($0,0,5)}'');/g" {} \;
+find /home/$client/web/$site/public_html/ -name \wp-config.php -exec sed -i "s/define('DB_USER', 'username_here');/define('DB_USER', '$client _ echo '$site' | awk '{print substr($0,0,5)}'');/g" {} \;
+find /home/$client/web/$site/public_html/ -name \wp-config.php -exec sed -i "s/define('DB_PASSWORD', 'password_here');/define('DB_PASSWORD', '');/g" {} \;
+
 
 echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/ 
