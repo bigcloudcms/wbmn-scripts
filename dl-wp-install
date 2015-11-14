@@ -46,10 +46,10 @@ echo 'Deleting unused themes twentythirteen and twentyfourteen...';
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
 
-rsync -avz /home/scripts/wp-config.php /home/$client/web/$site/public_html/wp-config-sample.php 
-find /home/$client/web/$site/public_html/ -name \wp-config.php -exec sed -i "s/define('DB_NAME', 'database_name_here');/define('DB_NAME', '$client _ echo '$site' | awk '{print substr($0,0,5)}'');/g" {} \;
-find /home/$client/web/$site/public_html/ -name \wp-config.php -exec sed -i "s/define('DB_USER', 'username_here');/define('DB_USER', '$client _ echo '$site' | awk '{print substr($0,0,5)}'');/g" {} \;
-find /home/$client/web/$site/public_html/ -name \wp-config.php -exec sed -i "s/define('DB_PASSWORD', 'password_here');/define('DB_PASSWORD', '');/g" {} \;
+rsync -avz /home/scripts/setup-config.php /home/$client/web/$site/public_html/wp-admin/ 
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_wordpress/$client _ echo '$site' | awk '{print substr($0,0,5)}'');/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_username/$client _ echo '$site' | awk '{print substr($0,0,5)}'');/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/your_password/Tripod=/g" {} \;
 
 
 echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
