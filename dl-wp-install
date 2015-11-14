@@ -48,10 +48,12 @@ rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen*
 
 site5="$site"
 site5digit=${site5:0:5}
+clientname="$client"
+client_=${clientname}
 
 rsync -avz /home/scripts/setup-config.php /home/$client/web/$site/public_html/wp-admin/ 
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_wordpress/$client ${site5digit}/g" {} \;
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_username/$client _ ${site5digit}/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_wordpress/${client_}${site5digit}/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_username/${client_}${site5digit}/g" {} \;
 find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/your_password/Tripod=/g" {} \;
 
 
