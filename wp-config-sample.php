@@ -18,6 +18,24 @@
  * @package WordPress
  */
 
+define('FS_METHOD','direct');
+define ('WP_POST_REVISIONS', '3');
+define('EMPTY_TRASH_DAYS', 3);
+//define('WPCOM_API_KEY','yourkeyhere');
+define( 'WP_MEMORY_LIMIT', '128M' );
+define( 'WP_MAX_MEMORY_LIMIT', '256M' ); // PHP Memory Limit
+// http://www.yoursite.com/wp-admin/maint/repair.php
+// define('WP_ALLOW_REPAIR', true); // Auto Database Optimization
+//define('FS_CHMOD_FILE', 0775);
+//define('FS_CHMOD_DIR', 0655);
+define('AUTOSAVE_INTERVAL', 180); // in seconds
+//define("COOKIE_DOMAIN", "www.yourdomain.com");
+//define("WP_CONTENT_URL", "http://static.yourdomain.com/wp-content");
+//define("WP_PLUGIN_URL", "http://www.yourdomain.com/wp-content/plugins");
+define( 'WP_AUTO_UPDATE_CORE', true );
+define( 'JETPACK_DEV_DEBUG', true);
+define ( 'WP_CACHE', true );
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'database_name_here');
@@ -29,7 +47,7 @@ define('DB_USER', 'username_here');
 define('DB_PASSWORD', 'password_here');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '10.99.0.13');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
