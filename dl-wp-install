@@ -57,6 +57,8 @@ find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec
 find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_username/${client_}_${site5digit}/g" {} \;
 find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/your_password/Tripod=002/g" {} \;
 
+find /home/$client/web/$site/public_html/wp-admin/ -name \install.php -exec sed -i "s/value_sitetitle/$site/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \install.php -exec sed -i "s/value_username/wpadmin/g" {} \;
 
 echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/ 
