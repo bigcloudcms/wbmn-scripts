@@ -46,9 +46,12 @@ echo 'Deleting unused themes twentythirteen and twentyfourteen...';
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
 
+site5digit="$site"
+echo `expr substr ${site5digit} 0 5`
+
 rsync -avz /home/scripts/setup-config.php /home/$client/web/$site/public_html/wp-admin/ 
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_wordpress/$client/g" {} \;
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_username/$client_/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_wordpress/$client $site5digit/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value_username/$client $site5digit/g" {} \;
 find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/your_password/Tripod=/g" {} \;
 
 
