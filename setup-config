@@ -1,5 +1,5 @@
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="wordpress"/value="$client_$site"/g" {} \; 
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/'username', 'example username'/'$client_$site', 'example username'/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="wordpress"/value="$client"/g" {} \; 
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/'username', 'example username'/'$client', 'example username'/g" {} \;
 find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/id="pwd" type="text"/id="pwd" type="password"/g" {} \;
-find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="'password', 'example password'/'Tripod=002', 'example password'/g" {} \;
+find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="'password', 'example password'/value="'Tripod=002', 'example password'/g" {} \;
 find /home/$client/web/$site/public_html/wp-admin/ -name \setup-config.php -exec sed -i "s/value="localhost"/value="10.99.0.13"/g" {} \;
