@@ -46,6 +46,9 @@ echo 'Deleting unused themes twentythirteen and twentyfourteen...';
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentyfourteen* 
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/twentythirteen* 
 
+cd /home/$client/web/$site/public_html/
+rsync -avz /home/scripts/wp-config-sample.php /home/$client/web/$site/public_html/ 
+
 echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/ 
 #rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/plugins/ /home/$client/web/$site/public_html/wp-content/plugins/
