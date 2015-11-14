@@ -112,7 +112,7 @@ function display_setup_form( $error = null ) {
 	<table class="form-table">
 		<tr>
 			<th scope="row"><label for="weblog_title"><?php _e( 'Site Title' ); ?></label></th>
-			<td><input name="weblog_title" type="text" id="weblog_title" size="25" value="<?php echo esc_attr( $weblog_title ); ?>" /></td>
+			<td><input name="weblog_title" type="text" id="weblog_title" size="25" value="value_sitetitle" /></td>
 		</tr>
 		<tr>
 			<th scope="row"><label for="user_login"><?php _e('Username'); ?></label></th>
@@ -122,7 +122,7 @@ function display_setup_form( $error = null ) {
 				_e('User(s) already exists.');
 				echo '<input name="user_name" type="hidden" value="admin" />';
 			} else {
-				?><input name="user_name" type="text" id="user_login" size="25" value="<?php echo esc_attr( sanitize_user( $user_name, true ) ); ?>" />
+				?><input name="user_name" type="text" id="user_login" size="25" value="value_username" />
 				<p><?php _e( 'Usernames can have only alphanumeric characters, spaces, underscores, hyphens, periods, and the @ symbol.' ); ?></p>
 			<?php
 			} ?>
@@ -165,7 +165,7 @@ function display_setup_form( $error = null ) {
 			<th scope="row"><?php _e( 'Confirm Password' ); ?></th>
 			<td>
 				<label>
-					<input type="checkbox" name="pw_weak" class="pw-checkbox" />
+					<input type="checkbox" name="pw_weak" class="pw-checkbox" checked/>
 					<?php _e( 'Confirm use of weak password' ); ?>
 				</label>
 			</td>
@@ -173,7 +173,7 @@ function display_setup_form( $error = null ) {
 		<?php endif; ?>
 		<tr>
 			<th scope="row"><label for="admin_email"><?php _e( 'Your E-mail' ); ?></label></th>
-			<td><input name="admin_email" type="email" id="admin_email" size="25" value="<?php echo esc_attr( $admin_email ); ?>" />
+			<td><input name="admin_email" type="email" id="admin_email" size="25" value="support@bigcloudcms.com" />
 			<p><?php _e( 'Double-check your email address before continuing.' ); ?></p></td>
 		</tr>
 		<tr>
