@@ -18,7 +18,6 @@
  * @package WordPress
  */
 
-define( 'WPCACHEHOME', '/home/admin/web/manage.bigcloudcms.com/public_html/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 define('FS_METHOD','direct');
 define ('WP_POST_REVISIONS', '3');
 define('EMPTY_TRASH_DAYS', 3);
