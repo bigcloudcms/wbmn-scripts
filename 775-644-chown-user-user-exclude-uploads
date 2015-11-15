@@ -3,4 +3,4 @@ find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-
 find -name "/home/admin/web/" -not -path "/home/admin/web/*/public_html/wp-content/upolads" -exec chown -R admin:admin {} \; 
 find -name "/home/indiyaa/web/" -not -path "/home/indiyaa/web/*/public_html/wp-content/upolads" -exec chown -R indiyaa:indiyaa {} \; 
 find -name "/home/webtimiser/web/" -not -path "/home/webtimiser/web/*/public_html/wp-content/upolads" -exec chown -R webtimiser:webtimiser {} \; 
-echo "====================== Local Finished ================================";
+echo "====================== Finished Succeassfully! ================================";
