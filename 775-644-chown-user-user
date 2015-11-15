@@ -4,7 +4,7 @@ find -name "/home/admin/web/" -not -path "/home/admin/web/*/public_html/wp-conte
 find -name "/home/indiyaa/web/" -not -path "/home/indiyaa/web/*/public_html/wp-content/upolads" -exec chown -R indiyaa:indiyaa {} \; 
 find -name "/home/webtimiser/web/" -not -path "/home/webtimiser/web/*/public_html/wp-content/upolads" -exec chown -R webtimiser:webtimiser {} \; 
 echo "====================== Local Finished ================================"; 
-ssh root@10.99.0.12 
+ssh -t -t root@10.99.0.12 
 find -name "/home/*/web/*/public_html" -type d -exec chmod 755 {} \; 
 find -name "/home/*/web/*/public_html" -type f -exec chmod 644 {} \; 
 find -name "/home/admin/web/"  -exec chown -R admin:admin {} \; 
