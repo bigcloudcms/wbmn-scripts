@@ -1,18 +1,18 @@
 #!/bin/bash
 
-find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type d -exec chmod 755 {} \; 
-find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type f -exec chmod 644 {} \;
+sudo find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type d -exec chmod 755 {} \; 
+sudo find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type f -exec chmod 644 {} \;
 
-find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777
-find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 775
+sudo find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777
+sudo find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 775
 
-find /home/admin/web/ -not -path /home/*/web/*/public_html/wp-content/upolads -exec chown -R admin:admin {} \; 
+sudo find /home/admin/web/ -exec chown -R admin:admin {} \; 
 #chown -R admin:admin /home/admin/web/ 
 
-find /home/indiyaa/web/ -path /home/*/web/*/public_html/wp-content/upolads -exec chown -R indiyaa:indiyaa {} \;
+sudo find /home/indiyaa/web/ -exec chown -R indiyaa:indiyaa {} \;
 #chown -R indiyaa:indiyaa /home/indiyaa/web/
 
-find /home/webtimiser/web/ -path /home/*/web/*/public_html/wp-content/upolads -exec chown -R webtimiser:webtimiser {} \;
+sudo find /home/webtimiser/web/ -exec chown -R webtimiser:webtimiser {} \;
 #chown -R webtimiser:webtimiser /home/webtimiser/web/
 
 echo "====================== 775-644-chown-user-user-exclude-uploads - All Finished Succeassfully! ================================";
