@@ -12,7 +12,7 @@ find /home/indiyaa/web/ -path /home/*/web/*/public_html/wp-content/upolads -exec
 find /home/webtimiser/web/ -path /home/*/web/*/public_html/wp-content/upolads -exec chown -R webtimiser:webtimiser {} \;
 #chown -R webtimiser:webtimiser /home/webtimiser/web/
 
-echo "====================== Finished Succeassfully! ================================";
+echo "====================== 775-644-chown-user-user-exclude-uploads - All Finished Succeassfully! ================================";
 
 
 #
