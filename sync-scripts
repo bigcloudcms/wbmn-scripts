@@ -17,4 +17,6 @@ rsync -a /home/wbmn-scripts-master/* /home/scripts
 rm -rf /home/wbmn-scripts-master*
 find /home/scripts* -type f -print0 | xargs -0 chmod 777 
 
+echo "========================== Scripts Updated Successfully! =================================";
+
 #####
