@@ -7,6 +7,9 @@ find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chm
 chown -R admin:admin /home/admin/web/
 chown -R indiyaa:indiyaa /home/indiyaa/web/ 
 chown -R webtimiser:webtimiser /home/webtimiser/web/
+
+echo " - ";
 echo "====================== Finished Succeassfully! ================================";
+echo " - ";
 
 #
