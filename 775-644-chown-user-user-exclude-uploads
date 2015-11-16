@@ -6,7 +6,10 @@ echo " - ";
 echo "============================ All Dirs 755 / Files 644 Changed Successfully! (Excluded Uploads) =================";
 echo " - ";
 
-
+sudo ssh -t -t 10.99.0.12
+find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777
+find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 777
+sudo exit
 #sudo find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777
 #sudo find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 777
 #echo " - ";
