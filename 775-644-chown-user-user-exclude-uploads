@@ -6,14 +6,14 @@ sudo find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_htm
 sudo find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777
 sudo find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 775
 
-sudo find /home/admin/web/ -exec chown -R admin:admin {} \; 
-#chown -R admin:admin /home/admin/web/ 
+#sudo find /home/admin/web/ -exec chown -R admin:admin {} \; 
+sudo chown -R admin:admin /home/admin/web/ 
 
-sudo find /home/indiyaa/web/ -exec chown -R indiyaa:indiyaa {} \;
-#chown -R indiyaa:indiyaa /home/indiyaa/web/
+#sudo find /home/indiyaa/web/ -exec chown -R indiyaa:indiyaa {} \;
+sudo chown -R indiyaa:indiyaa /home/indiyaa/web/
 
-sudo find /home/webtimiser/web/ -exec chown -R webtimiser:webtimiser {} \;
-#chown -R webtimiser:webtimiser /home/webtimiser/web/
+#sudo find /home/webtimiser/web/ -exec chown -R webtimiser:webtimiser {} \;
+sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
 
 echo "====================== 775-644-chown-user-user-exclude-uploads - All Finished Succeassfully! ================================";
 
