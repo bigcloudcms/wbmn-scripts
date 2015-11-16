@@ -18,5 +18,6 @@ rm -rf /home/wbmn-scripts-master*
 find /home/scripts* -type f -print0 | xargs -0 chmod 777 
 
 echo "========================== All Scripts Updated Successfully! =================================";
+echo " - ";
 
 #####
