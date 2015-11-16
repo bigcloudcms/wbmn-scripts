@@ -3,6 +3,9 @@
 find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type d -exec chmod 755 {} \; 
 find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type f -exec chmod 644 {} \;
 
+find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777
+find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 775
+
 find /home/admin/web/ -not -path /home/*/web/*/public_html/wp-content/upolads -exec chown -R admin:admin {} \; 
 #chown -R admin:admin /home/admin/web/ 
 
