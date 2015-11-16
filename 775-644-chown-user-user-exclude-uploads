@@ -1,6 +1,13 @@
 find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type d -exec chmod 755 {} \; 
-find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type f -exec chmod 644 {} \; 
-chown -R admin:admin /home/admin/web/ 
-chown -R indiyaa:indiyaa /home/indiyaa/web/
-chown -R webtimiser:webtimiser /home/webtimiser/web/
+find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type f -exec chmod 644 {} \;
+
+find /home/admin/web/ -exec chown -R admin:admin {} \; 
+#chown -R admin:admin /home/admin/web/ 
+
+find /home/indiyaa/web/ -exec chown -R indiyaa:indiyaa {} \;
+#chown -R indiyaa:indiyaa /home/indiyaa/web/
+
+find /home/webtimiser/web/ -exec chown -R webtimiser:webtimiser {} \;
+#chown -R webtimiser:webtimiser /home/webtimiser/web/
+
 echo "====================== Finished Succeassfully! ================================";
