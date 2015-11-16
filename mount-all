@@ -37,7 +37,7 @@ mount 10.99.0.12:/home/indiyaa/web/rsautomation.indiyaa.bigcloudcms.com/public_h
 mount 10.99.0.12:/home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/factsofedu.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content/uploads /home/indiyaa/web/siloindia.indiyaa.bigcloudcms.com/public_html/wp-content/uploads
 echo "================== indiyaa uploads Mouted Successfully ======================";
-mount 10.99.0.12:/home/backup /home/backup
+mount 10.99.0.12:/home/backup /backup
 echo "========================================================================";
 echo "================== That's All Mouted Successfully ======================";
 echo "========================================================================";
