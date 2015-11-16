@@ -3,11 +3,13 @@
 sudo find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type d -exec chmod 755 {} \; 
 sudo find -name "/home/*/web/*/public_html" -not -path "/home/*/web/*/public_html/wp-content/upolads" -type f -exec chmod 644 {} \;
 echo "============================ All Dirs 755 / Files 644 Changed Successfully! (Excluded Uploads) =================";
+echo " - ";
 
 
 sudo find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777
 sudo find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 775
 echo "============================ All (Uploads) Dirs 755 / Files 644 Changed Successfully! =================";
+echo " - ";
 
 sudo find -name "/home/admin/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R admin:admin {} \; 
 #sudo chown -R admin:admin /home/admin/web/ 
