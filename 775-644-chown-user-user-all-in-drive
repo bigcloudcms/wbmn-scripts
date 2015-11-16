@@ -3,7 +3,7 @@
 find /home/*/web/*/public_html -type d -print0 | xargs -0 chmod 755
 find /home/*/web/*/public_html -type f -print0 | xargs -0 chmod 644
 find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777
-find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 775
+find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 777
 chown -R admin:admin /home/admin/web/
 chown -R indiyaa:indiyaa /home/indiyaa/web/ 
 chown -R webtimiser:webtimiser /home/webtimiser/web/
