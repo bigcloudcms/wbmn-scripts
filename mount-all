@@ -15,7 +15,7 @@ mount 10.99.0.12:/home/webtimiser/web/granitten.webtimiser.bigcloudcms.com/publi
 mount 10.99.0.12:/home/webtimiser/web/trinitas.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/trinitas.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/webtimiser/web/flpenthouse.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/flpenthouse.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/webtimiser/web/salina-bavnehoj.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/salina-bavnehoj.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
-mount 10.99.0.12:/home/webtimiser/web/men-con.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/men-con.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
+# mount 10.99.0.12:/home/webtimiser/web/men-con.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/men-con.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/webtimiser/web/4faerger.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/4faerger.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/webtimiser/web/he-revision.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/he-revision.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
 mount 10.99.0.12:/home/webtimiser/web/pmanlaeg.webtimiser.bigcloudcms.com/public_html/wp-content/uploads /home/webtimiser/web/pmanlaeg.webtimiser.bigcloudcms.com/public_html/wp-content/uploads
