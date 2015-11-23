@@ -20,8 +20,8 @@ sudo find -name "/home/indiyaa/web/" -not -path "/home/*/web/*/public_html/wp-co
 
 sudo find -name "/home/webtimiser/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R webtimiser:webtimiser {} \;
 #sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
-ssh root@10.99.0.12 sudo find -name "/home/*/web/*/public_html/wp-content/upolads" -type d -exec chmod 777 {} \; 
-ssh root@10.99.0.12 sudo find -name "/home/*/web/*/public_html/wp-content/upolads" -type f -exec chmod 775 {} \;
+ssh root@10.99.0.12 sudo find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777 
+ssh root@10.99.0.12 sudo find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 777
 ssh root@10.99.0.12 sudo chown -R admin:admin /home/admin/web/
 ssh root@10.99.0.12 sudo chown -R indiyaa:indiyaa /home/indiyaa/web/ 
 ssh root@10.99.0.12 sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
