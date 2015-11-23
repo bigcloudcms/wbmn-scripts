@@ -78,7 +78,7 @@ wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz 
 ssh root@10.99.0.12 mkdir -p /home/$client/web/$site/public_html/wp-content/uploads
 mkdir -p /home/$client/web/$site/public_html/wp-content/uploads
 find /home/scripts/ -name \mount-all-sites -exec sed -i "/$site/d" {} \;
-echo "mount 10.99.0.12:/home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/public_html/wp-content/uploads" >> /home/scripts/mount-all-sites
+echo "mount 10.99.0.12:/home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/public_html/wp-content/uploads" >> /home/scripts/mount-all-sites | sort -r
 umount -a -t nfs 
 /home/scripts/mount-all-sites
 
