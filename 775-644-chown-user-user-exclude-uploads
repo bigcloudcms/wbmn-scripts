@@ -12,16 +12,19 @@ echo " - ";
 #echo "============================ All (Uploads) Dirs 777 / Files 777 Changed Successfully! =================";
 #echo " - ";
 
-#sudo find -name "/home/admin/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R admin:admin {} \; 
-sudo chown -R admin:admin /home/admin/web/ 
+sudo find -name "/home/admin/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R admin:admin {} \; 
+#sudo chown -R admin:admin /home/admin/web/ 
 
-#sudo find -name "/home/indiyaa/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R indiyaa:indiyaa {} \;
-sudo chown -R indiyaa:indiyaa /home/indiyaa/web/
+sudo find -name "/home/indiyaa/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R indiyaa:indiyaa {} \;
+#sudo chown -R indiyaa:indiyaa /home/indiyaa/web/
 
-#sudo find -name "/home/webtimiser/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R webtimiser:webtimiser {} \;
-sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
-
-ssh root@10.99.0.12 sudo chown -R admin:admin /home/admin/web/ && sudo chown -R indiyaa:indiyaa /home/indiyaa/web/ && sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
+sudo find -name "/home/webtimiser/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R webtimiser:webtimiser {} \;
+#sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
+ssh root@10.99.0.12 sudo find -name "/home/*/web/*/public_html/wp-content/upolads" -type d -exec chmod 777 {} \; 
+ssh root@10.99.0.12 sudo find -name "/home/*/web/*/public_html/wp-content/upolads" -type f -exec chmod 775 {} \;
+ssh root@10.99.0.12 sudo chown -R admin:admin /home/admin/web/
+ssh root@10.99.0.12 sudo chown -R indiyaa:indiyaa /home/indiyaa/web/ 
+ssh root@10.99.0.12 sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
 
 echo " - ";
 echo "====================== 775-644-chown-user-user-exclude-uploads - All Finished Succeassfully! ================================";
