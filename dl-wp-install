@@ -78,7 +78,8 @@ wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz 
 ssh root@10.99.0.12 mkdir -p /home/$client/web/$site/public_html/wp-content/uploads
 find /home/scripts/ -name \mount-all-sites -exec sed -i "/$site/d" {} \;
 echo "mount 10.99.0.12:/home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/public_html/wp-content/uploads" >> /home/scripts/mount-all-sites
-mount -o remount /home/scripts/mount-all-sites
+umount -a -t nfs 
+/home/scripts/mount-all && /home/scripts/mount-all-sites
 
 echo 'Chmod dir to 755 and files to 644';
 find /home/$client/web/$site/public_html -type d -not -path /home/$client/web/$site/public_html/wp-content/uploads/* -print0 | xargs -0 chmod 755 
