@@ -22,7 +22,7 @@ sudo find -name "/home/webtimiser/web/" -not -path "/home/*/web/*/public_html/wp
 #sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
 #ssh root@10.99.0.12 sudo find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777 
 #ssh root@10.99.0.12 sudo find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 777
-ssh root@10.99.0.12 sudo chown -R www-data:www-data /home/admin/web/*/public_html/wp-content/uploads | xargs -0 chmod 777 
+ssh root@10.99.0.12 sudo chown -R www-data:www-data /home/admin/web/*/public_html/wp-content/uploads && sudo chmod 777 /home/admin/web/*/public_html/wp-content/uploads
 
 echo " - ";
 echo "====================== 775-644-chown-user-user-exclude-uploads - All Finished Succeassfully! ================================";
