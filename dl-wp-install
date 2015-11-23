@@ -75,8 +75,8 @@ echo 'Downloading WPCloudCMS Theme from github...';
 cd /home/$client/web/$site/public_html/wp-content/themes/ 
 wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
 
-ssh root@10.99.0.12 mkdir -p /home/$client/web/$site/public_html/wp-content/uploads 
-sed -i '/$site/d' /home/scripts/mount-all-sites
+ssh root@10.99.0.12 mkdir -p /home/$client/web/$site/public_html/wp-content/uploads
+find /home/scripts/ -name \mount-all-sites -exec sed -i "s/$site//d" {} \;
 #echo "mount 10.99.0.12:/home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/public_html/wp-content/uploads" >> /home/scripts/mount-all-sites
 mount -o remount /home/scripts/mount-all-sites
 
