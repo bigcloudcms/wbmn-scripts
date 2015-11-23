@@ -20,6 +20,9 @@ sudo chown -R indiyaa:indiyaa /home/indiyaa/web/
 
 #sudo find -name "/home/webtimiser/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R webtimiser:webtimiser {} \;
 sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
+
+ssh root@10.99.0.12 sudo chown -R admin:admin /home/admin/web/ && sudo chown -R indiyaa:indiyaa /home/indiyaa/web/ && sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
+
 echo " - ";
 echo "====================== 775-644-chown-user-user-exclude-uploads - All Finished Succeassfully! ================================";
 echo " - ";
