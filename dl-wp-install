@@ -20,7 +20,8 @@ else
   
 rm -rf /home/$client/web/$site/public_html* 
   
-mkdir /home/$client/web/$site/public_html 
+mkdir /home/$client/web/$site/public_html
+
 if [ -f /home/$client/web/$site/tmp/wp-config.php ]; then echo 'wp-config.php Backup Exists, Restoring...';
 mv -f /home/$client/web/$site/tmp/wp-config.php /home/$client/web/$site/public_html/
 else
@@ -73,6 +74,9 @@ rm -rf /home/$client/web/$site/public_html/wp-content/shared-plugins-master*
 echo 'Downloading WPCloudCMS Theme from github...';
 cd /home/$client/web/$site/public_html/wp-content/themes/ 
 wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
+
+mkdir /drive/$client/web/$site/public_html/wp-content/uploads 
+ln -s /home/$client/web/$site/public_html/wp-content/uploads /drive/$client/web/$site/public_html/wp-content/uploads
 
 echo 'Chmod dir to 755 and files to 644';
 find /home/$client/web/$site/public_html -type d -not -path /home/$client/web/$site/public_html/wp-content/uploads/* -print0 | xargs -0 chmod 755 
