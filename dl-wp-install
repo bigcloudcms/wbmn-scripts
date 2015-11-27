@@ -62,6 +62,7 @@ find /home/$client/web/$site/public_html/wp-admin/ -name \install.php -exec sed 
 find /home/$client/web/$site/public_html/wp-admin/ -name \install.php -exec sed -i "s/value_username/wpadmin/g" {} \;
 
 echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
+mkdir /home/$client/web/$site/public_html/wp-content/themes/virtue_premium
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/ 
 #rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/plugins/ /home/$client/web/$site/public_html/wp-content/plugins/
 echo '-';
