@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set -x
-umount -a -t nfs
+umount /home/$client/web/$site/public_html/wp-content/uploads
 if [ -d /home/$client/web/$site/tmp ]; then echo 'tmp Exists';
 else
   echo 'tmp Not Exist'; fi
