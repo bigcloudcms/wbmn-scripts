@@ -2,6 +2,9 @@
 
 #set -x
 umount /home/$client/web/$site/public_html/wp-content/uploads
+echo '-';
+echo '========================== umounted /home/$client/web/$site/public_html/wp-content/uploads Successfully! =================================';
+echo '-';
 if [ -d /home/$client/web/$site/tmp ]; then echo 'tmp Exists';
 else
   echo 'tmp Not Exist'; fi
@@ -68,12 +71,9 @@ rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/theme
 echo '-';
 echo '========================== virtue_premium theme Installed / Updated Successfully! =================================';
 echo '-';
-echo 'Downloading BigCloudCMS mu plugins from github...';
-cd /home/$client/web/$site/public_html/wp-content/
-wget https://github.com/bigcloudcms/mu-plugins/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
+echo 'settingup mu plugins...';
 mkdir /home/$client/web/$site/public_html/wp-content/mu-plugins
-mv -f mu-plugins-master/* ./mu-plugins
-rm -rf /home/$client/web/$site/public_html/wp-content/mu-plugins-master*
+ln -s /home/$client/web/$site/public_html/wp-content/plugins/github-updater/mu/ghu-loader.php /home/$client/web/$site/public_html/wp-content/mu-plugins/
 echo '-';
 echo '========================== mu plugins Installed / Updated Successfully! =================================';
 echo '-';
