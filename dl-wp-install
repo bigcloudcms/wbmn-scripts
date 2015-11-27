@@ -109,6 +109,6 @@ find /home/$client/web/$site/public_html/wp-config-sample.php -type f -print0 | 
 chown -R $client:$client /home/$client/web/$site
 #find /home/$client/web/$site/public_html -type d -print0 | xargs -0 chmod 755 && find /home/$client/web/$site/public_html -type f -print0 | xargs -0 chmod 644 && find /home/$client/web/$site/public_html/wp-config-sample.php -type f -print0 | xargs -0 chmod 775 && chown -R $client:$client /home/$client/web/
 echo '-';
-echo '=============== All Finished Successfully! ===============';
+echo '=============== All Installations / Updates Completed Successfully! ===============';
 echo '-';
 #####
