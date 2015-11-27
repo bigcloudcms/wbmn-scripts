@@ -64,41 +64,51 @@ find /home/$client/web/$site/public_html/wp-admin/ -name \install.php -exec sed 
 echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/ 
 #rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/plugins/ /home/$client/web/$site/public_html/wp-content/plugins/
-
+echo '-';
+echo '========================== virtue_premium theme Installed / Updated Successfully! =================================';
+echo '-';
 echo 'Downloading BigCloudCMS mu plugins from github...';
 cd /home/$client/web/$site/public_html/wp-content/
 wget https://github.com/bigcloudcms/mu-plugins/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
 mkdir /home/$client/web/$site/public_html/wp-content/mu-plugins
 mv -f mu-plugins-master/* ./mu-plugins
 rm -rf /home/$client/web/$site/public_html/wp-content/mu-plugins-master*
-
+echo '-';
+echo '========================== mu plugins Installed / Updated Successfully! =================================';
+echo '-';
 echo 'Downloading BigCloudCMS shared plugins from github...';
 cd /home/$client/web/$site/public_html/wp-content/
 wget https://github.com/bigcloudcms/shared-plugins/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
 mv -f shared-plugins-master/* ./plugins 
 rm -rf /home/$client/web/$site/public_html/wp-content/shared-plugins-master* 
-
+echo '-';
+echo '========================== shared plugins Installed / Updated Successfully! =================================';
+echo '-'; 
 echo 'Downloading WPCloudCMS Theme from github...';
 cd /home/$client/web/$site/public_html/wp-content/themes/ 
 wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
 mkdir /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms
 mv -f wpcloudcms-master/* ./wpcloudcms 
 rm -rf /home/$client/web/$site/public_html/wp-content/wpcloudcms-master* 
-
+echo '-';
+echo '========================== WPCloudCMS Child Theme Installed /Updated Successfully! =================================';
+echo '-'; 
 ssh root@10.99.0.12 mkdir -p /home/$client/web/$site/public_html/wp-content/uploads
 mkdir -p /home/$client/web/$site/public_html/wp-content/uploads
 find /home/scripts/ -name \mount-all-sites -exec sed -i "/$site/d" {} \;
 echo "mount 10.99.0.12:/home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/public_html/wp-content/uploads" >> /home/scripts/mount-all-sites | sort -r
 umount -a -t nfs 
 /home/scripts/mount-all-sites
-
+echo '-';
+echo '========================== uploads dir Created on Drive Server Successfully! =================================';
+echo '-'; 
 echo 'Chmod dir to 755 and files to 644';
 find /home/$client/web/$site/public_html -type d -not -path /home/$client/web/$site/public_html/wp-content/uploads/* -print0 | xargs -0 chmod 755 
 find /home/$client/web/$site/public_html -type f -not -path /home/$client/web/$site/public_html/wp-content/uploads/* -print0 | xargs -0 chmod 644 
 find /home/$client/web/$site/public_html/wp-config-sample.php -type f -print0 | xargs -0 chmod 775
 chown -R $client:$client /home/$client/web/$site
 #find /home/$client/web/$site/public_html -type d -print0 | xargs -0 chmod 755 && find /home/$client/web/$site/public_html -type f -print0 | xargs -0 chmod 644 && find /home/$client/web/$site/public_html/wp-config-sample.php -type f -print0 | xargs -0 chmod 775 && chown -R $client:$client /home/$client/web/
-
-
-echo '=============== Finished Successfully ===============';
+echo '-';
+echo '=============== All Finished Successfully! ===============';
+echo '-';
 #####
