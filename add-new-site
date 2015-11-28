@@ -1,4 +1,4 @@
-#! bin Bash
+#!/bin/bash
 
 echo "mount 10.99.0.12:/home/$client/web/$site/public_html/wp-content/uploads /home/$client/web/$site/public_html/wp-content/uploads" >> /home/scripts/mount-all-sites | sort -r
 
