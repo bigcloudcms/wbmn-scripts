@@ -67,9 +67,12 @@ find /home/$client/web/$site/public_html/wp-admin/ -name \install.php -exec sed 
 echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
 mkdir /home/$client/web/$site/public_html/wp-content/themes/virtue_premium
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/ 
-#rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/plugins/ /home/$client/web/$site/public_html/wp-content/plugins/
 echo '-';
-echo '========================== virtue_premium theme Installed / Updated Successfully! =================================';
+echo '========================== virtue_premium theme Installed from wpmaster Successfully! =================================';
+echo '-';
+rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/plugins/ /home/$client/web/$site/public_html/wp-content/plugins/
+echo '-';
+echo '========================== Plugins Installed from wpmaster Successfully! =================================';
 echo '-';
 echo 'settingup mu plugins...';
 mkdir /home/$client/web/$site/public_html/wp-content/mu-plugins
@@ -77,17 +80,23 @@ ln -s /home/$client/web/$site/public_html/wp-content/plugins/github-updater/mu/g
 echo '-';
 echo '========================== mu plugins Installed / Updated Successfully! =================================';
 echo '-';
-echo 'Downloading BigCloudCMS shared plugins from github...';
-cd /home/$client/web/$site/public_html/wp-content/
-wget https://github.com/bigcloudcms/shared-plugins/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
-mv -f shared-plugins-master/* ./plugins 
-rm -rf /home/$client/web/$site/public_html/wp-content/shared-plugins-master* 
-echo '-';
-echo '========================== shared plugins Installed / Updated Successfully! =================================';
-echo '-'; 
+#echo 'Downloading BigCloudCMS shared plugins from github...';
+#cd /home/$client/web/$site/public_html/wp-content/
+#wget https://github.com/bigcloudcms/shared-plugins/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
+#mv -f shared-plugins-master/* ./plugins 
+#rm -rf /home/$client/web/$site/public_html/wp-content/shared-plugins-master* 
+#echo '-';
+#echo '========================== shared plugins Installed / Updated Successfully! =================================';
+#echo '-'; 
 echo 'Downloading WPCloudCMS Theme from github...';
 cd /home/$client/web/$site/public_html/wp-content/themes/ 
 wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
+if [ -d /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms ]; then echo 'wpcloudcms Exists';
+cd /home/$client/web/$site/public_html/wp-content/themes/
+tar -zcvf wpcloudcms.tar.gz wpcloudcms
+rm -rf /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms*
+else
+  echo 'wpcloudcms Not Exist'; fi
 mkdir /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms
 mv -f wpcloudcms-master/* ./wpcloudcms 
 rm -rf /home/$client/web/$site/public_html/wp-content/wpcloudcms-master* 
@@ -101,7 +110,7 @@ echo "mount 10.99.0.12:/home/$client/web/$site/public_html/wp-content/uploads /h
 umount -a -t nfs
 /home/scripts/mount-all-sites
 echo '-';
-echo '========================== uploads dir Created on Drive Server Successfully! =================================';
+echo '========================== uploads dir Created on Drive and mounted here Successfully! =================================';
 echo '-'; 
 echo 'Chmod dir to 755 and files to 644';
 find /home/$client/web/$site/public_html -type d -not -path /home/$client/web/$site/public_html/wp-content/uploads/* -print0 | xargs -0 chmod 755 
