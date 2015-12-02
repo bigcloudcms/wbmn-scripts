@@ -3,14 +3,15 @@
 #set -x
 echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/
-- 
-========================== virtue_premium Theme Updated Successfully! =================================
- - 
+echo'-'
+echo'========================== virtue_premium Theme Updated Successfully! ================================='
+echo'-'
 cd /home/$client/web/$site/public_html/wp-content/themes/ && wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
 mkdir /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms
 mv -f wpcloudcms-master/* ./wpcloudcms 
 rm -rf /home/$client/web/$site/public_html/wp-content/wpcloudcms-master* 
-- 
-========================== wpcloudcms child Theme Updated Successfully! =================================
- - 
+/home/scripts/775-644-chown-user-user-exclude-uploads
+echo'-'
+echo'========================== wpcloudcms child Theme Updated Successfully! ================================='
+echo'-'
 #####
