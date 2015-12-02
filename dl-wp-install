@@ -110,14 +110,15 @@ echo "mount 10.99.0.12:/home/$client/web/$site/public_html/wp-content/uploads /h
 echo '-';
 echo '========================== uploads dir Created on Drive and mounted here Successfully! =================================';
 echo '-'; 
+umount /home/$client/web/$site/public_html/wp-content/uploads
 echo 'Chmod dir to 755 and files to 644';
 find /home/$client/web/$site/public_html -type d -not -path /home/$client/web/$site/public_html/wp-content/uploads/* -print0 | xargs -0 chmod 755 
 find /home/$client/web/$site/public_html -type f -not -path /home/$client/web/$site/public_html/wp-content/uploads/* -print0 | xargs -0 chmod 644 
 find /home/$client/web/$site/public_html/wp-config-sample.php -type f -print0 | xargs -0 chmod 775
 chown -R $client:$client /home/$client/web/$site
 find /home/$client/web/$site/public_html -type d -print0 | xargs -0 chmod 755 && find /home/$client/web/$site/public_html -type f -print0 | xargs -0 chmod 644 && find /home/$client/web/$site/public_html/wp-config-sample.php -type f -print0 | xargs -0 chmod 775 && chown -R $client:$client /home/$client/web/
-/home/scripts/775-644-chown-user-user-exclude-uploads
 umount -a -t nfs
+/home/scripts/775-644-chown-user-user-exclude-uploads
 /home/scripts/mount-all-sites
 echo '-';
 echo '=============== All Installations / Updates Completed Successfully! ===============';
