@@ -10,7 +10,20 @@ cd /home/$client/web/$site/public_html/wp-content/themes/ && wget https://github
 mkdir /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms
 mv -f wpcloudcms-master/* ./wpcloudcms 
 rm -rf /home/$client/web/$site/public_html/wp-content/wpcloudcms-master* 
+echo'-'
+echo'========================== virtue_premium Theme Updated Successfully! ================================='
+echo'-'
+umount /home/$client/web/$site/public_html/wp-content/uploads
+umount -a -t nfs
+find /home/$client/web/$site/public_html -type d -not -path /home/$client/web/$site/public_html/wp-content/uploads/* -print0 | xargs -0 chmod 755 
+find /home/$client/web/$site/public_html -type f -not -path /home/$client/web/$site/public_html/wp-content/uploads/* -print0 | xargs -0 chmod 644 
+find /home/$client/web/$site/public_html/wp-config-sample.php -type f -print0 | xargs -0 chmod 775
+chown -R $client:$client /home/$client/web/$site
+find /home/$client/web/$site/public_html -type d -print0 | xargs -0 chmod 755 && find /home/$client/web/$site/public_html -type f -print0 | xargs -0 chmod 644 && find /home/$client/web/$site/public_html/wp-config-sample.php -type f -print0 | xargs -0 chmod 775 && chown -R $client:$client /home/$client/web/
+#/home/scripts/775-644-chown-user-user-exclude-uploads
+ssh root@10.99.0.12 sudo chown -R www-data:www-data /home/$client/web/$site/public_html/wp-content/uploads && sudo chmod 777 /home/$client/web/$site/public_html/wp-content/uploads
 /home/scripts/775-644-chown-user-user-exclude-uploads
+/home/scripts/mount-all-sites
 echo'-'
 echo'========================== wpcloudcms child Theme Updated Successfully! ================================='
 echo'-'
