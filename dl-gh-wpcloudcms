@@ -11,7 +11,7 @@ cd /home/$client/web/$site/public_html/wp-content/themes/ && wget https://github
 rm -rf /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms*
 mkdir /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms
 mv -f /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms-master/* /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms 
-rm -rf /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms-master* 
+#rm -rf /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms-master* 
 echo'-'
 echo'========================== virtue_premium Theme Updated Successfully! ================================='
 echo'-'
