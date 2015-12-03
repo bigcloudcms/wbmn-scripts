@@ -7,12 +7,12 @@ echo'-'
 echo'========================== virtue_premium Theme Updated Successfully! ================================='
 echo'-'
 echo 'Downloading WPCloudCMS Theme from github...';
+rm -rf /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms*
 cd /home/$client/web/$site/public_html/wp-content/themes/ 
 wget https://github.com/bigcloudcms/wpcloudcms/archive/master.tar.gz && tar xfz master.tar.gz && rm -f master.tar.gz
 if [ -d /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms ]; then echo 'wpcloudcms Exists';
 cd /home/$client/web/$site/public_html/wp-content/themes/
 tar -zcvf wpcloudcms.tar.gz wpcloudcms
-rm -rf /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms*
 else
   echo 'wpcloudcms Not Exist'; fi
 mkdir /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms
