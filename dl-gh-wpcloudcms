@@ -17,7 +17,7 @@ else
   echo 'wpcloudcms Not Exist'; fi
 mkdir /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms
 mv -f wpcloudcms-master/* ./wpcloudcms 
-rm -rf /home/$client/web/$site/public_html/wp-content/wpcloudcms-master* 
+rm -rf /home/$client/web/$site/public_html/wp-content/themes/wpcloudcms-master* 
 echo '-';
 echo '========================== WPCloudCMS Child Theme Installed /Updated Successfully! =================================';
 echo '-'; 
