@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "============================ Starting 775-644-chown-user-user-exclude-uploads ======================";
 umount /home/$client/web/$site/public_html/wp-content/uploads
 umount -a -t nfs
 find '/home/$client/web/$site/public_html' -type d -not -path '/home/$client/web/$site/public_html/wp-content/uploads/*' -print0 | xargs -0 chmod 755 
