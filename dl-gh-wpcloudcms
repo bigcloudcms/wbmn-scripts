@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set -x
-echo 'syncing virtue_premium theme from wpmaster.bigcloudcms.com...';
+echo "syncing virtue_premium theme from wpmaster.bigcloudcms.com...";
 rsync -avz /home/admin/web/wpmaster.bigcloudcms.com/public_html/wp-content/themes/virtue_premium/ /home/$client/web/$site/public_html/wp-content/themes/virtue_premium/
 echo "-"
 echo "========================== virtue_premium Theme Updated Successfully! ================================="
@@ -59,7 +59,7 @@ ssh root@10.99.0.12 sudo chown -R www-data:www-data /home/admin/web/*/public_htm
 echo " - ";
 echo "====================== 775-644-chown-user-user-exclude-uploads - All Finished Succeassfully! ================================";
 echo " - ";
-echo'-'
-echo'========================== wpcloudcms child Theme Updated Successfully! ================================='
-echo'-'
+echo " - ";
+echo "========================== wpcloudcms child Theme Updated Successfully! =================================";
+echo " - ";
 #####
