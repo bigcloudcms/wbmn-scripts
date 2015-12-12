@@ -2,6 +2,6 @@
 
 now=$(date +"%m_%d_%Y")
 cd /home/backup/ 
-sudo tar -zcvf mysql-$now.tar.gz mysql
+tar -zcvf mysql-$now.tar.gz mysql
 
 ###
