@@ -1,7 +1,8 @@
 #!/bin/bash
 
 now=$(date +"%m_%d_%Y")
-mkdir /home/backup/mysql-$now
-rsync -avz /home/backup/mysql/ /home/backup/mysql-$now
+
+cd /home/backup/ 
+tar -zcvf mysql-$now.tar.gz mysql
 
 ###
