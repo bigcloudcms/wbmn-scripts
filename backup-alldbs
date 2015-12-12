@@ -1,6 +1,6 @@
 #!/bin/bash
 
 now=$(date +"%m_%d_%Y")
-cp /home/backup/mysql /home/backup/mysql-$now
+rsync -avz /home/backup/mysql /home/backup/mysql-$now
 
 ###
