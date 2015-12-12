@@ -2,7 +2,7 @@
 
 now=$(date +"%m_%d_%Y")
 ssh -t root@10.99.0.12
-sudo cd /home/backup/ 
-sudo tar -zcvf mysql-$now.tar.gz mysql
+sudo su cd /home/backup/ 
+sudo su tar -zcvf mysql-$now.tar.gz mysql
 
 ###
