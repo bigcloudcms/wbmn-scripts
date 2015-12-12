@@ -1,8 +1,8 @@
 #!/bin/bash
 
 now=$(date +"%m_%d_%Y")
-ssh -t -t root@10.99.0.12
-cd /home/backup/ 
-tar -zcvf mysql-$now.tar.gz mysql
+ssh -t root@10.99.0.12
+sudo cd /home/backup/ 
+sudo tar -zcvf mysql-$now.tar.gz mysql
 
 ###
