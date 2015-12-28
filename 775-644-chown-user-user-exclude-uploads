@@ -6,6 +6,7 @@ find '/home/$client/web/$site/public_html' -type d -not -path '/home/$client/web
 find '/home/$client/web/$site/public_html' -type f -not -path '/home/$client/web/$site/public_html/wp-content/uploads/*' -print0 | xargs -0 chmod 644 
 find '/home/$client/web/$site/public_html/wp-config-sample.php' -type f -print0 | xargs -0 chmod 775
 chown -R $client:$client /home/$client/web/$site
+sudo chown -R www-data:www-data /home/$client/web/$site/public_html
 find '/home/$client/web/$site/public_html' -type d -print0 | xargs -0 chmod 755 && find '/home/$client/web/$site/public_html' -type f -print0 | xargs -0 chmod 644 && find '/home/$client/web/$site/public_html/wp-config-sample.php' -type f -print0 | xargs -0 chmod 775 && chown -R $client:$client /home/$client/web/
 #/home/scripts/775-644-chown-user-user-exclude-uploads
 ssh root@10.99.0.12 sudo chown -R www-data:www-data /home/$client/web/$site/public_html/wp-content/uploads && sudo chmod 777 /home/$client/web/$site/public_html/wp-content/uploads
@@ -22,17 +23,17 @@ echo " - ";
 #echo "============================ All (Uploads) Dirs 777 / Files 777 Changed Successfully! =================";
 #echo " - ";
 
-sudo find -name "/home/admin/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R admin:admin {} \; 
+#sudo find -name "/home/admin/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R admin:admin {} \; 
 #sudo chown -R admin:admin /home/admin/web/ 
 
-sudo find -name "/home/indiyaa/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R indiyaa:indiyaa {} \;
+#sudo find -name "/home/indiyaa/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R indiyaa:indiyaa {} \;
 #sudo chown -R indiyaa:indiyaa /home/indiyaa/web/
 
-sudo find -name "/home/webtimiser/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R webtimiser:webtimiser {} \;
+#sudo find -name "/home/webtimiser/web/" -not -path "/home/*/web/*/public_html/wp-content/upolads" -exec chown -R webtimiser:webtimiser {} \;
 #sudo chown -R webtimiser:webtimiser /home/webtimiser/web/
 #ssh root@10.99.0.12 sudo find /home/*/web/*/public_html/wp-content/uploads -type d -print0 | xargs -0 chmod 777 
 #ssh root@10.99.0.12 sudo find /home/*/web/*/public_html/wp-content/uploads -type f -print0 | xargs -0 chmod 777
-ssh root@10.99.0.12 sudo chown -R www-data:www-data /home/admin/web/*/public_html/wp-content/uploads && sudo chmod 777 /home/admin/web/*/public_html/wp-content/uploads
+ssh root@10.99.0.12 sudo chown -R www-data:www-data /home/admin/web/*/public_html && sudo chmod 777 /home/admin/web/*/public_html/wp-content/uploads
 /home/scripts/mount-all-sites
 echo " - ";
 echo "====================== 775-644-chown-user-user-exclude-uploads - All Finished Succeassfully! ================================";
